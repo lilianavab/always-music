@@ -1,0 +1,34 @@
+--Conectar al psql con el usuario 
+psql -U postgres
+
+-- Se crea la base de datos llamada "estudiante"
+CREATE DATABASE estudiante;
+
+--Conectarse a la nueva base de dato
+\c estudiante
+
+-- CREACION de la Tabla Estudiante
+CREATE TABLE estudiante (
+    rut VARCHAR(20) PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    curso VARCHAR(100) NOT NULL,
+    nivel VARCHAR(50) NOT NULL
+);
+
+-- CONSULTAS DE LA TABLA
+SELECT * FROM estudiante;
+
+-- SE INSERTA 10 Registros de Estudiantes
+INSERT INTO estudiante (rut, nombre, curso, nivel) VALUES
+('17475865-6', 'Juan Velasquez', 'Tecnologia Musical', 'basico'),
+('15487934-3', 'Brenda Martinez', 'Educacion Auditiva y Solfeo', 'intermedio'),
+('26789145-9', 'Maria Espinoza', 'Historia de la Musica', 'basico'),
+('20458741-3', 'Claritza Rivero', 'Instrumento Principal', 'avanzado'),
+('23369456-3', 'Sahily Arias', 'Teoria Musical', 'basico'),
+('22456258-9', 'Diego Ruiz', 'Ensamble o Banda', 'intermedio'),
+('25456789-9', 'Fernando Aguilera', 'Improvisacion', 'avanzado'),
+('26458478-9', 'Cristofer Martinez', 'Composicion y Arreglo', 'avanzado'),
+('19597455-6', 'Sofia Ontiveros', 'Instrumento Principal', 'intermedio'),
+('24158234-6', 'Alessandra Cruz', 'Teoria Musical', 'basico');
+
+
